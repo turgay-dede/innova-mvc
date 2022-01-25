@@ -9,6 +9,7 @@ import java.io.*;
 @Log4j2
 public class Kiss { // olabildigince basit yap
     String path = "C:\\bootcamp\\innova\\patika.txt";
+
     public void utilWriter() {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path, true))) {
             String value = JOptionPane.showInputDialog("Lütfen birşeyler giriniz");
@@ -33,7 +34,7 @@ public class Kiss { // olabildigince basit yap
 
     public static void main(String[] args) {
         Kiss kiss = new Kiss();
-        // kiss.utilWriter();
-        kiss.utilReader();
+        kiss.utilWriter();
+        //kiss.utilReader();
     }
 }
