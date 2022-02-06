@@ -10,12 +10,10 @@ import java.util.Scanner;
 @Log4j2
 public class Client {
     public static void main(String[] args) {
-        Scanner scanner = null;
         String number;
         String ipAddress = "localhost";
         int port = 7777;
         try (DataOutputStream dataOutputStream = new DataOutputStream(new Socket(ipAddress, port).getOutputStream())) {
-            scanner = new Scanner(System.in);
             number = JOptionPane.showInputDialog("Lütfen bir sayi giriniz: ");
             dataOutputStream.writeUTF(number);
         } catch (IOException e) {
